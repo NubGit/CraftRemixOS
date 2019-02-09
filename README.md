@@ -1,4 +1,4 @@
 # CraftRemixOS
 # It's brand new.
-  It's Sweet. 
-  Coming soon.
+-----
+This the icons.
