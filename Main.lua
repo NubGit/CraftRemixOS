@@ -3,17 +3,15 @@ function setup()
 local installwrite1 = "RemixCraftOs - Setup"
 local installwrite2 = "Enter Password"
 local installwrite3 = "Press enter when your done."
-local intallwritepos1 = 1,1
-local installwritepos2 = 1,4
-local installwritepos3 = 1,5
-term.setCursorPos(intallwritepos1)
+term.setCursorPos(1,1)
 term.clear()
 term.setBackgroundColor(colors.green)
 term.clear()
+term.setBackgroundColor( colors.black )
 print(installwrite1)
-term.setCursorPos(intallwritepos2)
+term.setCursorPos(1,4)
 print(installwrite2)
-term.setCursorPos(intallwritepos3)
+term.setCursorPos(1,5)
 print(installwrite3)
 local p = io.read()
 local configFile = fs.open("config.ini", "w")  --# You don't *have* to use "ini" in your file name, this is just an example.
@@ -73,6 +71,7 @@ if a == Readline then
 end
 else 
 setup()
+end
 end
 --end of system apps
 function logonfail()
