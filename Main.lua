@@ -21,6 +21,66 @@ local configFile = fs.open("config.ini", "w")  --# You don't *have* to use "ini"
 	print("rebooting.")
 	os.reboot()
 end 
+function changepass()
+
+end
+function dskmgr()
+term.clear()
+print(fs.getFreeSpace("/"))
+sleep(5)
+oss()
+end
+function talkback()
+term.clear()	
+while true do
+local message = read()
+if message == exit then
+oss()
+else
+print(message)		
+end
+end
+function cal()
+term.clear()
+term.setBackgroundColor(colors.blue)
+term.clear()
+print("add, subtract, multiply or divide? [or type 'exit' to go back to Home]") 
+op = read()
+print("") -- just gives us some space to work with
+
+print("FIRST NUMBER")
+
+num1 = tonumber(read()) -- accepts the first number to be stored in the variable 'number1'
+print("")
+
+print("SECOND NUMBER")
+num2 = tonumber(read())
+print("")
+
+-- now we operate on the number depending on what the user typed first
+
+if op == "add" then 
+ result = num1+num2
+print(result) -- this prints the result
+end
+
+if op == "multiply" then
+ result = num1*num2 -- asterisk represents multiply
+print(result)
+end
+
+if op == "divide" then
+ result = num1/num2
+print(result)
+end
+
+if op == "subtract" then
+ result = num1-num2
+print(result)
+end
+if op == "exit"  then 
+oss()
+end
 function OsShell()
 	term.clear()
 	term.setCursorPos(1,1)
