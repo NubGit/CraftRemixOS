@@ -14,7 +14,8 @@
    this. 1. Run minecraft and also MAKE SURE YOU HAVE THE MOD 'COMPUTERCRAFT'. 2. Create a world. 3. Grab an advanced computer. 4. type
    'edit [any name here]' the [any name here] is for you can pick anyname for your file. 5. Add they text as you like then, Press CTRL OR 
    COMMAND. Then make sure it's on the 'save' then hit enter.
-  ### How do I install it manualy ~ 2
+  
+  # How do I install it manualy 2
    For windows, Press WIN + R that window icon. You will see 'RUN'. type, '%appdata%/.minecraft/saves' [dont type '' if you're typing].
    Mac users, Im sorry. I don't have a mac. But you can look up how to get to the saves folder in minecraft.
    If you're in saves then, click the world you created before with the advanced computer. look for 'computer' then click 1. What if you 
