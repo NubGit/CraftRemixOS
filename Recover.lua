@@ -38,12 +38,14 @@ print("help - shows all commands, repair - gives you a repair option., shell - b
 elseif r == c2 then
 repairos()
 elseif r == c3 then
-os()
+osshell()
 
 elseif r == c4 then
 print("r")
-end
 
+else
+term.clear()
+end
 end
 end
   
@@ -59,7 +61,7 @@ local shellos = read()
 if shellos == "exit" then
 bck()
 else
-sell.run(shellos)
+shell.run(shellos)
 end
 
 end 
