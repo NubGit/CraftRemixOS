@@ -113,6 +113,8 @@ function notepad()
 	
 end
 function logon()
+local irecover = fs.exists("recover.lua")
+if irecover then
 local ini = fs.exists("config.ini")
 if ini then
 term.clear()
@@ -133,6 +135,13 @@ else
 setup()
 end
 end
+else
+term.clear()
+print("Your computer need a inportant file. We are downloading it.")
+shell.run("wget https://raw.githubusercontent.com/NubGit/CraftRemixOS/master/Recover.lua recover.lua")
+os.reboot()
+end
+
 --end of system apps
 function logonfail()
 logon()
