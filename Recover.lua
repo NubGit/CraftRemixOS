@@ -3,7 +3,7 @@ function repairos()
 while true do
 term.clear()
 term.setCursorPos(1,1)
-print("repair - commands are, installicons, makedir,exit.")
+print("repair - commands are, installicons, makedir, exit.")
 local readingchoice = read()
 if readingchoice ==  "installicons" then
 bck()
@@ -29,9 +29,9 @@ local c2 = "repair"
 local c3 = "shell"
 local c4 = "reinstall"
 term.setCursorPos(1,1)
-print("Recover ~ Shell ~ HELP FOR commands")
+print("Recover help for commands")
 term.setCursorPos(1,2)
-io.write("R> ")
+io.write("r |> ")
 local r = read()
 if r == c1 then
 print("help - shows all commands, repair - gives you a repair option., shell - brings you to the craftos shell, reinstall - installs everything back.")
