@@ -1,3 +1,36 @@
+function repairos()
+while true do
+term.clear()
+term.setCursorPos(1,1)
+print("repair - commands are, installicons, makedir,exit.")
+local readingchoice = read()
+if readingchoice ==  "installicons" then
+bck()
+elseif readingchoice == "exit" then
+bck()
+elseif readingchoice == "makedir" then
+
+shell.run("mkdir OperatingSystem/Icons")
+shell.run("mkdir OperatingSystem")
+bck()
+end
+end
+
+  
+--
+function osshell()
+ while true do
+local shellos = read()
+if shellos == "exit" then
+bck()
+else
+sell.run(shellos)
+end
+
+end 
+end
+  
+--
 function bck()
 recover()
 end
@@ -15,42 +48,17 @@ local r = read()
 if r == c1 then
 print("help - shows all commands, repair - gives you a repair option., shell - brings you to the craftos shell, reinstall - installs everything back.")
 elseif r == c2 then
-while true do
-term.clear()
-term.setCursorPos(1,1)
-print("repair - commands are, installicons, makedir.")
-local readingchoice = read()
-if readingchoice ==  "installicons" then
-bck()
-elseif readingchoice == "makedir" then
-local folder = "OperatingSystem"
-local folder2 = "OperatingSystem/Icons"
-if folder then
-print("Skipped.")
-if folder2 then 
-"Skipped."
-
-else
-
-shell.run("mkdir OperatingSystem/Icons")
-else
-shell.run("mkdir OperatingSystem")
-end
-end
-end
+repairos()
 elseif r == c3 then
-while true do
+osshell()
 
-local shellos = read()
-if shellos == exit then
-bck()
-else
-sell.run(shellos)
-end
-end
 elseif r == c4 then
+print("r")
+end
+
 end
 end
+
 
 term.setBackgroundColor(colors.blue)
 term.clear()
