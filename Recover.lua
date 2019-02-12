@@ -21,8 +21,19 @@ local readingchoice = read()
 if readingchoice ==  "installicons" then
 bck()
 elseif readingchoice == "makedir" then
+local folder = "OperatingSystem"
+local folder2 = "OperatingSystem/Icons"
+if folder then
+print("Skipped.")
+if folder2 then 
+"Skipped."
 
+else
 
+shell.run("mkdir OperatingSystem/Icons")
+else
+shell.run("mkdir OperatingSystem")
+end
 end
 end
 elseif r == c3 then
