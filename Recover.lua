@@ -1,3 +1,4 @@
+
 function repairos()
 while true do
 term.clear()
@@ -15,9 +16,43 @@ shell.run("mkdir OperatingSystem")
 bck()
 end
 end
-
+end
   
 --
+function recover()
+term.clear()
+while true do
+term.setTextColor( colors.white )
+
+local c1 = "help"
+local c2 = "repair"
+local c3 = "shell"
+local c4 = "reinstall"
+term.setCursorPos(1,1)
+print("Recover ~ Shell ~ HELP FOR commands")
+term.setCursorPos(1,2)
+io.write("R> ")
+local r = read()
+if r == c1 then
+print("help - shows all commands, repair - gives you a repair option., shell - brings you to the craftos shell, reinstall - installs everything back.")
+elseif r == c2 then
+repairos()
+elseif r == c3 then
+os()
+
+elseif r == c4 then
+print("r")
+end
+
+end
+end
+  
+--
+function bck() -- short for back
+recover()
+end
+
+-- shell
 function osshell()
  while true do
 local shellos = read()
@@ -29,36 +64,7 @@ end
 
 end 
 end
-  
 --
-function bck()
-recover()
-end
-function recover()
-term.clear()
-while true do
-local c1 = "help"
-local c2 = "repair"
-local c3 = "shell"
-local c4 = "reinstall"
-print("Recover ~ Shell ~ HELP FOR commands")
-term.setCursorPos("1,2")
-io.write("R> ")
-local r = read()
-if r == c1 then
-print("help - shows all commands, repair - gives you a repair option., shell - brings you to the craftos shell, reinstall - installs everything back.")
-elseif r == c2 then
-repairos()
-elseif r == c3 then
-osshell()
-
-elseif r == c4 then
-print("r")
-end
-
-end
-end
-
 
 term.setBackgroundColor(colors.blue)
 term.clear()
