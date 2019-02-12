@@ -8,6 +8,8 @@ local c1 = "help"
 local c2 = "repair"
 local c3 = "shell"
 local c4 = "reinstall"
+print("Recover ~ Shell ~ HELP FOR commands")
+term.setCursorPos("1,2")
 io.write("R> ")
 local r = read()
 if r == c1 then
